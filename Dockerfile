@@ -20,6 +20,8 @@ RUN wget -q https://s3.amazonaws.com/Minecraft.Download/versions/1.8.7/minecraft
 WORKDIR /data
 VOLUME /data
 
+RUN echo $MINECRAFT_OPS > ops.json
+
 # Expose the container's network port: 25565 during runtime.
 EXPOSE 25565
 
